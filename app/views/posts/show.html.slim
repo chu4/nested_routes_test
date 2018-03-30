@@ -1,0 +1,11 @@
+table
+  thead
+    tr
+      th  Post's Title
+      th  Post's Description
+      th  Post's Comments
+  tbody
+    tr
+      td = @post.title
+      td = @post.description
+      td = link_to "Comments", user_post_comments_path(@user, @post)

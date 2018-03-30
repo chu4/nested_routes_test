@@ -1,0 +1,10 @@
+table.table.table-bordered
+  thead
+    tr
+      th  User Name
+      th  User Description
+  tbody
+    - @users.each do |user|
+      tr
+        td = link_to user.name, user_path(user)
+        td = user.description

@@ -1,0 +1,12 @@
+table.table.table-bordered
+  thead
+    tr
+      th  Post's Author
+      th  Post's Title
+      th  Post's Description
+  tbody
+    - @posts.each do |post|
+      tr
+        th = link_to post.user.name, user_path(@user)
+        td = link_to post.title, user_post_path(@user, post)
+        td = post.description

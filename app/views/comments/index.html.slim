@@ -1,0 +1,12 @@
+table.table.table-bordered
+  thead
+    tr
+      th  Comment's Author
+      th  Comment's Content
+      th  Comment
+  tbody
+    - @comments.each do |comment|
+      tr
+        td = link_to comment.user.name, user_path(@user)
+        td = comment.content
+        td = link_to "Comment", user_post_comment_path(@user, @post, comment)

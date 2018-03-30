@@ -1,0 +1,9 @@
+table.table.table-bordered
+  thead
+    tr
+      th  Comment's Author
+      th  Comment's Content
+  tbody
+    tr
+      td = link_to @comment.user.name, user_path(@user)
+      td = @comment.content
