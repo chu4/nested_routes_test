@@ -1,3 +1,7 @@
+h1= "#{ @post.title } Comments"
+
+= link_to "Create new comment", new_user_post_comment_path(@user, @post)
+
 table.table.table-bordered
   thead
     tr
