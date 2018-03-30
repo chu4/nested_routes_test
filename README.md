@@ -1,18 +1,12 @@
-# README
+## To run application you need:
+* Ruby `v.2.4.1`
+* PostgreSQL
 
+## Installation
 
-* Ruby version 2.4.1
-
-* Rails 5.1.6
-
-* DB postgres
-
-* git clone
-
-* bundle
-
-* rails db:create
-
-* rails db:seed
-
-* rails s
+* Run `git clone`
+* Run `bundle`
+* Run `rails db:create`
+* Run `rails db:migrate`
+* Run `rails db:seed`
+* Run `rails s`
