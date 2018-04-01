@@ -1,3 +1,5 @@
+= link_to "Create new post", new_user_posts_path(@post.user)
+
 table
   thead
     tr
@@ -8,4 +10,4 @@ table
     tr
       td = @post.title
       td = @post.description
-      td = link_to "Comments", user_post_comments_path(@user, @post)
+      td = link_to "Comments", post_comments_path(@post)

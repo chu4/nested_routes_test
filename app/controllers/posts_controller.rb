@@ -1,12 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @user = current_user
-    @posts = @user.posts.all
+    @posts = Post.all
   end
 
   def show
-    @user = current_user
-    @post = @user.posts.find(params[:id])
+    @post = Post.all.find(params[:id])
   end
 
   def new
@@ -18,7 +16,7 @@ class PostsController < ApplicationController
     @user = current_user
     @post = @user.posts.build(post_params)
     if @post.save
-      redirect_to user_post_path(@user, @post)
+      redirect_to post_path(@post)
     else
       render :new
     end

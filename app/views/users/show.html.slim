@@ -3,9 +3,9 @@ table
     tr
       th  User Name
       th  User Description
-      th  User's Posts
+      th  Posts
   tbody
     tr
       td = @user.name
       td = @user.description
-      td = link_to "Posts", user_posts_path(@user)
+      td = link_to "Posts", posts_path

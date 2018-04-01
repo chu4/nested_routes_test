@@ -5,5 +5,5 @@ table.table.table-bordered
       th  Comment's Content
   tbody
     tr
-      td = link_to @comment.user.name, user_path(@user)
+      td = link_to @comment.user.name, user_path(@comment.user)
       td = @comment.content

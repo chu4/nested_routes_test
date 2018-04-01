@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   root 'users#index'
 
   resources :users, only: %i[index show new create] do
-    resources :posts, only: %i[index show new create] do
-      resources :comments, only: %i[index show new create]
-    end
+    resource :posts, only: %i[new create]
+  end
+
+  resources :posts, only: %i[index show] do
+    resources :comments, only: %i[index show new create]
   end
 end

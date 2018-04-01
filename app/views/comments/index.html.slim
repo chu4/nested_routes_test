@@ -1,6 +1,6 @@
 h1= "#{ @post.title } Comments"
 
-= link_to "Create new comment", new_user_post_comment_path(@user, @post)
+= link_to "Create new comment", new_post_comment_path(@post)
 
 table.table.table-bordered
   thead
@@ -11,6 +11,6 @@ table.table.table-bordered
   tbody
     - @comments.each do |comment|
       tr
-        td = link_to comment.user.name, user_path(@user)
+        td = link_to comment.user.name, user_path(comment.user)
         td = comment.content
-        td = link_to "Comment", user_post_comment_path(@user, @post, comment)
+        td = link_to "Comment", post_comment_path(@post, comment)
